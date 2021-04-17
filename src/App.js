@@ -21,7 +21,6 @@ export default function App() {
   const emojiFindHandler = (event) => {
     const userInput = event.target.value;
     const meaning = foodDictionary[userInput];
-    console.log(meaning);
     if (meaning === undefined) {
       setEmojiMeaning("You definately have an unique taste");
     } else {
@@ -33,17 +32,8 @@ export default function App() {
   };
 
   const emojiClickHandler = (emoji) => {
-    console.log(emoji);
     const meaning = foodDictionary[emoji];
-    console.log(meaning);
-    if (meaning === undefined) {
-      setEmojiMeaning("You definately have an unique taste");
-    } else {
-      setEmojiMeaning(`Well that's a ${meaning}`);
-    }
-    if (emoji === "") {
-      setEmojiMeaning("");
-    }
+    setEmojiMeaning(`Well that's a ${meaning}`);
   };
 
   return (
